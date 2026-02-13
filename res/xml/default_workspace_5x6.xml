@@ -17,7 +17,7 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
 
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-    <!-- Dialer, Messaging, [Maps/Music], Browser, Camera -->
+    <!-- Dialer, Messaging, Agent, Browser, Camera -->
     <resolve
         launcher:container="-101"
         launcher:screen="0"
@@ -40,13 +40,13 @@
         <favorite launcher:uri="mmsto:" />
     </resolve>
 
-    <resolve
+    <favorite
         launcher:container="-101"
         launcher:screen="2"
         launcher:x="2"
-        launcher:y="0" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_CONTACTS;end" />
-    </resolve>
+        launcher:y="0"
+        launcher:packageName="com.android.agentconsole"
+        launcher:className="com.android.agentconsole.AgentConsoleActivity" />
 
     <resolve
         launcher:container="-101"

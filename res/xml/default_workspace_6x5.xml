@@ -17,14 +17,14 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
 
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-    <!-- Contacts, Calendar, Gallery, Music, Browser, Camera -->
-    <resolve
+    <!-- Agent, Calendar, Gallery, Music, Browser, Camera -->
+    <favorite
         launcher:container="-101"
         launcher:screen="0"
         launcher:x="0"
-        launcher:y="0" >
-        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_CONTACTS;end" />
-    </resolve>
+        launcher:y="0"
+        launcher:packageName="com.android.agentconsole"
+        launcher:className="com.android.agentconsole.AgentConsoleActivity" />
 
     <resolve
         launcher:container="-101"
