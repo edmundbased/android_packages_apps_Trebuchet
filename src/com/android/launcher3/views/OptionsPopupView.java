@@ -222,6 +222,11 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
                     OptionsPopupView::enterHomeGardening));
         }
         options.add(new OptionItem(launcher,
+                R.string.mini_apps_button_text,
+                R.drawable.ic_mini_apps,
+                IGNORE,
+                OptionsPopupView::openMiniAppStore));
+        options.add(new OptionItem(launcher,
                 R.string.settings_button_text,
                 R.drawable.ic_setting,
                 LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS,
@@ -253,6 +258,14 @@ public class OptionsPopupView<T extends Context & ActivityContext> extends Arrow
             }
             return WidgetsFullSheet.show(launcher, true /* animated */);
         }
+    }
+
+    private static boolean openMiniAppStore(View view) {
+        Launcher launcher = Launcher.getLauncher(view.getContext());
+        launcher.startActivity(new Intent(launcher,
+                com.android.launcher3.miniapp.MiniAppStoreActivity.class)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        return true;
     }
 
     private static boolean startSettings(View view) {

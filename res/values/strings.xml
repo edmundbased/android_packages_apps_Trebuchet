@@ -275,6 +275,8 @@
     <string name="edit_home_screen">Edit Home Screen</string>
     <!-- Text for settings button [CHAR LIMIT=20]-->
     <string name="settings_button_text">Home settings</string>
+    <!-- Text for mini-apps button in long-press menu [CHAR LIMIT=20]-->
+    <string name="mini_apps_button_text">Mini-Apps</string>
     <!-- Message shown when a feature is disabled by the administrator -->
     <string name="msg_disabled_by_admin">Disabled by your admin</string>
 
