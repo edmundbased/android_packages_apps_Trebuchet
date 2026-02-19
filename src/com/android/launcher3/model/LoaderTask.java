@@ -709,6 +709,10 @@ public class LoaderTask implements Runnable {
             }
         }
 
+        // Load installed mini-apps into the all apps list
+        com.android.launcher3.miniapp.MiniAppLoader.loadMiniApps(
+                mApp.getContext(), mBgAllAppsList);
+
         Trace.beginSection("LoadAllAppsIconsInBulk");
         try {
             mIconCache.getTitlesAndIconsInBulk(iconRequestInfos);

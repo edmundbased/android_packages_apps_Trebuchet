@@ -206,6 +206,7 @@ public class LauncherSettings {
                 case ITEM_TYPE_TASK: return "TASK";
                 case ITEM_TYPE_QSB: return "QSB";
                 case ITEM_TYPE_APP_PAIR: return "APP_PAIR";
+                case 100: return "MINIAPP";
                 default: return String.valueOf(type);
             }
         }

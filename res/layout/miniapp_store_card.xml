@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/miniapp_card_margin_bottom"
+    app:cardCornerRadius="@dimen/miniapp_card_corner_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/material_color_outline_variant"
+    app:cardBackgroundColor="@color/material_color_surface_container_low">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/miniapp_card_padding"
+        android:gravity="center_vertical">
+
+        <!-- Icon placeholder -->
+        <FrameLayout
+            android:layout_width="@dimen/miniapp_icon_size"
+            android:layout_height="@dimen/miniapp_icon_size">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/miniapp_icon_placeholder"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/icon_letter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/miniapp_icon_placeholder"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/material_color_on_secondary_container"
+                android:fontFamily="google-sans" />
+        </FrameLayout>
+
+        <!-- App info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp">
+
+            <!-- Name + category row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    style="@style/MiniApp.TextAppearance.Title" />
+
+                <TextView
+                    android:id="@+id/app_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/miniapp_category_badge_bg"
+                    android:paddingStart="@dimen/miniapp_badge_padding_h"
+                    android:paddingEnd="@dimen/miniapp_badge_padding_h"
+                    android:paddingTop="@dimen/miniapp_badge_padding_v"
+                    android:paddingBottom="@dimen/miniapp_badge_padding_v"
+                    android:textSize="11sp"
+                    android:fontFamily="google-sans-text"
+                    android:textColor="@color/material_color_on_primary_container"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/app_developer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                style="@style/MiniApp.TextAppearance.Caption" />
+
+            <TextView
+                android:id="@+id/app_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:paddingTop="4dp"
+                style="@style/MiniApp.TextAppearance.Body" />
+        </LinearLayout>
+
+        <!-- Install button -->
+        <Button
+            android:id="@+id/btn_install"
+            style="@style/MiniApp.Button.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/miniapp_install" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

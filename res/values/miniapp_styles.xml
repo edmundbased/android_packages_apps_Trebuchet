@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme for mini-app management activities.
+         Inherits HomeSettings.Theme for Google Sans fonts, transparent bars,
+         and DeviceDefault.Settings as the base (automatic dark mode). -->
+    <style name="MiniApp.Theme" parent="HomeSettings.Theme" />
+
+    <!-- Typography -->
+    <style name="MiniApp.TextAppearance.Headline" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:fontFamily">google-sans</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MiniApp.TextAppearance.Title" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:fontFamily">google-sans</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="MiniApp.TextAppearance.Body" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="MiniApp.TextAppearance.Caption" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:fontFamily">google-sans-text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="MiniApp.Card" parent="CardView">
+        <item name="cardCornerRadius">@dimen/miniapp_card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/material_color_outline_variant</item>
+        <item name="cardBackgroundColor">@color/material_color_surface_container_low</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="MiniApp.Button.Primary" parent="@android:style/Widget.DeviceDefault.Button">
+        <item name="android:background">@drawable/miniapp_button_primary</item>
+        <item name="android:textColor">@color/material_color_on_primary</item>
+        <item name="android:fontFamily">google-sans-text-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MiniApp.Button.Secondary" parent="@android:style/Widget.DeviceDefault.Button">
+        <item name="android:background">@drawable/miniapp_button_secondary</item>
+        <item name="android:textColor">@color/material_color_primary</item>
+        <item name="android:fontFamily">google-sans-text-medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MiniApp.Button.Danger" parent="MiniApp.Button.Secondary">
+        <item name="android:textColor">@color/material_color_error</item>
+    </style>
+</resources>

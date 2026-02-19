@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/miniapp_card_margin_bottom"
+    app:cardCornerRadius="@dimen/miniapp_card_corner_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/material_color_outline_variant"
+    app:cardBackgroundColor="@color/material_color_surface_container_low">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/miniapp_card_padding">
+
+        <!-- Header row: icon + name/domain -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon placeholder -->
+            <TextView
+                android:id="@+id/icon_letter"
+                android:layout_width="@dimen/miniapp_icon_size"
+                android:layout_height="@dimen/miniapp_icon_size"
+                android:background="@drawable/miniapp_icon_placeholder"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/material_color_on_secondary_container"
+                android:fontFamily="google-sans" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    style="@style/MiniApp.TextAppearance.Title" />
+
+                <TextView
+                    android:id="@+id/app_domain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    style="@style/MiniApp.TextAppearance.Caption" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Info rows -->
+        <TextView
+            android:id="@+id/app_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            style="@style/MiniApp.TextAppearance.Caption" />
+
+        <TextView
+            android:id="@+id/app_permissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            style="@style/MiniApp.TextAppearance.Caption" />
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="12dp">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/MiniApp.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/miniapp_clear_data"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_uninstall"
+                style="@style/MiniApp.Button.Danger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/miniapp_uninstall" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

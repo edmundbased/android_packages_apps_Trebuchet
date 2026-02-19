@@ -3030,7 +3030,9 @@ public class Launcher extends StatefulActivity<LauncherState>
     }
 
     public Stream<SystemShortcut.Factory> getSupportedShortcuts() {
-        return Stream.of(APP_INFO, WIDGETS, INSTALL);
+        return Stream.of(APP_INFO, WIDGETS, INSTALL,
+                com.android.launcher3.miniapp.MiniAppShortcut.MINIAPP_INFO,
+                com.android.launcher3.miniapp.MiniAppShortcut.MINIAPP_UNINSTALL);
     }
 
     /**

@@ -145,6 +145,7 @@
     <color name="material_color_on_tertiary_fixed">#29132D</color>
     <color name="material_color_primary_fixed_dim">#ADC6FF</color>
     <color name="material_color_secondary_container">#DBE2F9</color>
+    <color name="material_color_error">#BA1A1A</color>
     <color name="material_color_error_container">#FFDAD5</color>
     <color name="material_color_on_primary_fixed">#001A41</color>
     <color name="material_color_primary_inverse">#ADC6FF</color>

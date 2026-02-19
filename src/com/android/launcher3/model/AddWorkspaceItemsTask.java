@@ -114,6 +114,11 @@ public class AddWorkspaceItemsTask extends BaseModelUpdateTask {
                     if (item instanceof WorkspaceItemFactory) {
                         item = ((WorkspaceItemFactory) item).makeWorkspaceItem(app.getContext());
                     }
+                } else if (item.itemType
+                        == com.android.launcher3.miniapp.MiniAppInfo.ITEM_TYPE_MINIAPP) {
+                    if (item instanceof WorkspaceItemFactory) {
+                        item = ((WorkspaceItemFactory) item).makeWorkspaceItem(app.getContext());
+                    }
                 }
                 if (item != null) {
                     filteredItems.add(item);

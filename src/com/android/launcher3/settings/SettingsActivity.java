@@ -89,6 +89,10 @@ public class SettingsActivity extends FragmentActivity
     private static final String KEY_SUGGESTIONS = "pref_suggestions";
     private static final String SUGGESTIONS_PACKAGE = "com.google.android.as";
 
+    private static final String KEY_MINIAPPS_MANAGE = "pref_miniapps_manage";
+    private static final String KEY_MINIAPP_STORE = "pref_miniapp_store";
+    private static final String KEY_MINIAPP_INSTALL = "pref_miniapp_install";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -293,6 +297,30 @@ public class SettingsActivity extends FragmentActivity
 
                 case KEY_SUGGESTIONS:
                     return LineageUtils.isPackageEnabled(getActivity(), SUGGESTIONS_PACKAGE);
+
+                case KEY_MINIAPPS_MANAGE:
+                    preference.setOnPreferenceClickListener(p -> {
+                        startActivity(new Intent(getActivity(),
+                                com.android.launcher3.miniapp.MiniAppManageActivity.class));
+                        return true;
+                    });
+                    return true;
+
+                case KEY_MINIAPP_STORE:
+                    preference.setOnPreferenceClickListener(p -> {
+                        startActivity(new Intent(getActivity(),
+                                com.android.launcher3.miniapp.MiniAppStoreActivity.class));
+                        return true;
+                    });
+                    return true;
+
+                case KEY_MINIAPP_INSTALL:
+                    preference.setOnPreferenceClickListener(p -> {
+                        startActivity(new Intent(getActivity(),
+                                com.android.launcher3.miniapp.MiniAppInstallActivity.class));
+                        return true;
+                    });
+                    return true;
             }
 
             return true;

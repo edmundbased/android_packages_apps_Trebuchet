@@ -642,6 +642,32 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         drawDotIfNecessary(canvas);
+        drawMiniAppBadgeIfNecessary(canvas);
+    }
+
+    /**
+     * Draws a small blue indicator dot in the bottom-right corner of the icon
+     * when this view represents a mini-app.
+     */
+    private void drawMiniAppBadgeIfNecessary(Canvas canvas) {
+        if (!(getTag() instanceof com.android.launcher3.miniapp.MiniAppInfo)) {
+            return;
+        }
+        Rect iconBounds = new Rect();
+        getIconBounds(iconBounds);
+        float size = Math.min(iconBounds.width(), iconBounds.height());
+        float badgeRadius = size * 0.08f;
+        float borderWidth = size * 0.02f;
+        float cx = iconBounds.right - badgeRadius - borderWidth;
+        float cy = iconBounds.bottom - badgeRadius - borderWidth;
+
+        Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        borderPaint.setColor(0xFFFFFFFF);
+        canvas.drawCircle(cx, cy, badgeRadius + borderWidth, borderPaint);
+
+        Paint badgePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        badgePaint.setColor(0xFF2196F3);
+        canvas.drawCircle(cx, cy, badgeRadius, badgePaint);
     }
 
     /**

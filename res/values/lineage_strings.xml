@@ -56,4 +56,15 @@
     <!-- App suggestions -->
     <string name="pref_suggestions_title">Suggestions</string>
     <string name="pref_suggestions_summary">For app drawer &amp; home screen suggestions</string>
+
+    <!-- Mini-Apps -->
+    <string name="pref_miniapps_title">Mini-Apps</string>
+    <string name="pref_miniapps_summary">Manage installed mini-apps</string>
+    <string name="pref_miniapp_store_title">Mini-App Store</string>
+    <string name="pref_miniapp_store_summary">Browse and install mini-apps</string>
+    <string name="pref_miniapp_install_title">Install from URL</string>
+    <string name="pref_miniapp_install_summary">Install a mini-app from a manifest URL</string>
+    <string name="miniapp_info_shortcut">Mini-App Info</string>
+    <string name="miniapp_uninstall_shortcut">Uninstall Mini-App</string>
+    <string name="miniapp_permissions_shortcut">Permissions</string>
 </resources>

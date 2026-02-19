@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="miniapp_activity_padding">16dp</dimen>
+    <dimen name="miniapp_card_corner_radius">16dp</dimen>
+    <dimen name="miniapp_card_padding">16dp</dimen>
+    <dimen name="miniapp_card_margin_bottom">8dp</dimen>
+    <dimen name="miniapp_icon_size">48dp</dimen>
+    <dimen name="miniapp_bar_height">48dp</dimen>
+    <dimen name="miniapp_badge_corner_radius">12dp</dimen>
+    <dimen name="miniapp_badge_padding_h">8dp</dimen>
+    <dimen name="miniapp_badge_padding_v">2dp</dimen>
+    <dimen name="miniapp_button_corner_radius">20dp</dimen>
+</resources>

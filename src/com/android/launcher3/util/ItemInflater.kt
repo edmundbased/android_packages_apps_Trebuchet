@@ -32,6 +32,7 @@ import com.android.launcher3.model.ModelWriter
 import com.android.launcher3.model.data.FolderInfo
 import com.android.launcher3.model.data.ItemInfo
 import com.android.launcher3.model.data.LauncherAppWidgetInfo
+import com.android.launcher3.miniapp.MiniAppInfo
 import com.android.launcher3.model.data.WorkspaceItemFactory
 import com.android.launcher3.model.data.WorkspaceItemInfo
 import com.android.launcher3.views.ActivityContext
@@ -86,6 +87,15 @@ class ItemInflater<T>(
             Favorites.ITEM_TYPE_APPWIDGET,
             Favorites.ITEM_TYPE_CUSTOM_APPWIDGET ->
                 return inflateAppWidget(item as LauncherAppWidgetInfo, writer)
+            MiniAppInfo.ITEM_TYPE_MINIAPP -> {
+                val info =
+                    if (item is WorkspaceItemFactory) {
+                        (item as WorkspaceItemFactory).makeWorkspaceItem(context)
+                    } else {
+                        item as WorkspaceItemInfo
+                    }
+                return createShortcut(info, parent)
+            }
             else -> throw RuntimeException("Invalid Item Type")
         }
     }

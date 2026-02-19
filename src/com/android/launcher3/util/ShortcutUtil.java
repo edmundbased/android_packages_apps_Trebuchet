@@ -27,7 +27,8 @@ public class ShortcutUtil {
      * Returns true when we should show shortcut menu for the item.
      */
     public static boolean supportsShortcuts(ItemInfo info) {
-        return isActive(info) && (isApp(info) || isPinnedShortcut(info));
+        return isActive(info) && (isApp(info) || isPinnedShortcut(info)
+                || info instanceof com.android.launcher3.miniapp.MiniAppInfo);
     }
 
     /**

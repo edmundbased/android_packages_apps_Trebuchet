@@ -96,4 +96,20 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <!-- Mini-Apps section -->
+    <Preference
+        android:key="pref_miniapps_manage"
+        android:title="@string/pref_miniapps_title"
+        android:summary="@string/pref_miniapps_summary" />
+
+    <Preference
+        android:key="pref_miniapp_store"
+        android:title="@string/pref_miniapp_store_title"
+        android:summary="@string/pref_miniapp_store_summary" />
+
+    <Preference
+        android:key="pref_miniapp_install"
+        android:title="@string/pref_miniapp_install_title"
+        android:summary="@string/pref_miniapp_install_summary" />
+
 </androidx.preference.PreferenceScreen>

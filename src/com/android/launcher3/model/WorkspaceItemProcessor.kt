@@ -29,6 +29,7 @@ import android.util.LongSparseArray
 import com.android.launcher3.InvariantDeviceProfile
 import com.android.launcher3.LauncherAppState
 import com.android.launcher3.LauncherSettings.Favorites
+import com.android.launcher3.miniapp.MiniAppInfo
 import com.android.launcher3.Utilities
 import com.android.launcher3.backuprestore.LauncherRestoreEventLogger.RestoreError
 import com.android.launcher3.logging.FileLog
@@ -101,6 +102,7 @@ class WorkspaceItemProcessor(
                 Favorites.ITEM_TYPE_APP_PAIR -> processFolderOrAppPair()
                 Favorites.ITEM_TYPE_APPWIDGET,
                 Favorites.ITEM_TYPE_CUSTOM_APPWIDGET -> processWidget()
+                MiniAppInfo.ITEM_TYPE_MINIAPP -> processMiniApp()
             }
         } catch (e: Exception) {
             Log.e(TAG, "Desktop items loading interrupted", e)
@@ -497,6 +499,34 @@ class WorkspaceItemProcessor(
             }
         }
         c.checkAndAddItem(appWidgetInfo, bgDataModel)
+    }
+
+    /**
+     * Processes a pinned mini-app workspace item.
+     *
+     * Mini-apps don't have a real APK, so we skip the package validation that
+     * processAppOrDeepShortcut() performs. The stored intent contains all the
+     * extras needed to launch MiniAppActivity (app_id, start_url, manifest_url).
+     */
+    private fun processMiniApp() {
+        val intent = c.parseIntent()
+        if (intent == null) {
+            c.markDeleted(
+                "Null intent for mini-app item id=${c.id}",
+                RestoreError.MISSING_INFO
+            )
+            return
+        }
+
+        val info = c.loadSimpleWorkspaceItem()
+        c.applyCommonProperties(info)
+        info.intent = intent
+        info.rank = c.rank
+        info.spanX = 1
+        info.spanY = 1
+        info.itemType = MiniAppInfo.ITEM_TYPE_MINIAPP
+        c.markRestored()
+        c.checkAndAddItem(info, bgDataModel, memoryLogger)
     }
 
     companion object {

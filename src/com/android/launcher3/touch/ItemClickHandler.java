@@ -108,6 +108,11 @@ public class ItemClickHandler {
             } else if (v instanceof AppPairIcon) {
                 onClickAppPairIcon(v);
             }
+        } else if (tag instanceof com.android.launcher3.miniapp.MiniAppInfo) {
+            // Launch mini-app in WebView container
+            com.android.launcher3.miniapp.MiniAppInfo miniApp =
+                    (com.android.launcher3.miniapp.MiniAppInfo) tag;
+            launcher.startActivity(miniApp.getLaunchIntent());
         } else if (tag instanceof AppInfo) {
             startAppShortcutOrInfoActivity(v, (AppInfo) tag, launcher);
         } else if (tag instanceof LauncherAppWidgetInfo) {

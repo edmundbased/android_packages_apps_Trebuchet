@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MiniApp Store -->
+    <string name="miniapp_store_title">Mini-App Store</string>
+    <string name="miniapp_store_subtitle">Discover and install lightweight web apps</string>
+    <string name="miniapp_store_empty">No mini-apps available</string>
+    <string name="miniapp_store_error">Failed to load store: %1$s</string>
+    <string name="miniapp_store_developer">by %1$s</string>
+
+    <!-- MiniApp Install -->
+    <string name="miniapp_install_title">Install Mini-App</string>
+    <string name="miniapp_install_subtitle">Enter a manifest URL or web page URL to install a mini-app.</string>
+    <string name="miniapp_install_url_hint">https://example.com/manifest.json</string>
+    <string name="miniapp_install_fetch">Fetch Manifest</string>
+    <string name="miniapp_install_enter_url">Enter a URL</string>
+    <string name="miniapp_install_fetch_failed">Failed: %1$s</string>
+    <string name="miniapp_install_permissions_requested">Permissions requested:</string>
+    <string name="miniapp_install_no_permissions">No special permissions requested</string>
+    <string name="miniapp_install_privileged"> (privileged)</string>
+    <string name="miniapp_install_developer">Developer: %1$s</string>
+    <string name="miniapp_install_installing">Installing\u2026</string>
+    <string name="miniapp_install_success">Installed: %1$s</string>
+    <string name="miniapp_install_failed">Install failed: %1$s</string>
+
+    <!-- MiniApp Manage -->
+    <string name="miniapp_manage_title">Installed Mini-Apps</string>
+    <string name="miniapp_manage_empty">No mini-apps installed</string>
+    <string name="miniapp_manage_storage">Storage: %1$s</string>
+    <string name="miniapp_manage_permissions_summary">Permissions: %1$d/%2$d granted</string>
+    <string name="miniapp_manage_permissions_header">Permissions</string>
+    <string name="miniapp_manage_no_permissions">No permissions requested</string>
+    <string name="miniapp_manage_not_found">Mini-app not found</string>
+    <string name="miniapp_manage_data_cleared">Data cleared</string>
+    <string name="miniapp_manage_cleared_for">Cleared data for %1$s</string>
+    <string name="miniapp_manage_updated">Updated to latest version</string>
+    <string name="miniapp_manage_up_to_date">Already up to date</string>
+    <string name="miniapp_manage_update_failed">Update failed: %1$s</string>
+
+    <!-- Shared actions -->
+    <string name="miniapp_install">Install</string>
+    <string name="miniapp_installed">Installed</string>
+    <string name="miniapp_uninstall">Uninstall</string>
+    <string name="miniapp_uninstalled">Uninstalled</string>
+    <string name="miniapp_uninstalled_name">%1$s uninstalled</string>
+    <string name="miniapp_clear_data">Clear Data</string>
+    <string name="miniapp_clear_all_data">Clear All Data</string>
+    <string name="miniapp_check_updates">Check for Updates</string>
+    <string name="miniapp_cancel">Cancel</string>
+    <string name="miniapp_close">Close</string>
+
+    <!-- Share -->
+    <string name="miniapp_share_chooser_title">Share with Mini-App</string>
+
+    <!-- Uninstall confirmation dialog -->
+    <string name="miniapp_uninstall_confirm_title">Uninstall %1$s?</string>
+    <string name="miniapp_uninstall_confirm_message">This will remove the mini-app and all its data.</string>
+</resources>
