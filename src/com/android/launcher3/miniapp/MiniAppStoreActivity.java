@@ -45,7 +45,7 @@ import java.util.List;
 /**
  * Browsable mini-app store that fetches a catalog from a remote JSON index.
  *
- * The store index URL is configurable. Default: store.basedos.org/miniapps/index.json
+ * The store index URL is configurable. Default: store.based.one/miniapps/index.json
  * Each entry has: name, description, manifest_url, icon_url, developer, category.
  *
  * Users can browse, preview, and install mini-apps directly from this UI.
@@ -57,7 +57,7 @@ public class MiniAppStoreActivity extends Activity {
 
     // Default store index — overridable via intent extra
     private static final String DEFAULT_STORE_URL =
-            "https://store.basedos.org/miniapps/index.json";
+            "https://store.based.one/miniapps/index.json";
     public static final String EXTRA_STORE_URL = "store_url";
 
     private RecyclerView mRecyclerView;
