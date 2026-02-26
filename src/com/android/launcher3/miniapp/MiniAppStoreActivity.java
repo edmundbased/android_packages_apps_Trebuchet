@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 The GrandiOS Project
+ * Copyright (C) 2026 The BasedOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ import java.util.List;
 /**
  * Browsable mini-app store that fetches a catalog from a remote JSON index.
  *
- * The store index URL is configurable. Default: store.grandios.org/miniapps/index.json
+ * The store index URL is configurable. Default: store.basedos.org/miniapps/index.json
  * Each entry has: name, description, manifest_url, icon_url, developer, category.
  *
  * Users can browse, preview, and install mini-apps directly from this UI.
@@ -57,7 +57,7 @@ public class MiniAppStoreActivity extends Activity {
 
     // Default store index — overridable via intent extra
     private static final String DEFAULT_STORE_URL =
-            "https://store.grandios.org/miniapps/index.json";
+            "https://store.basedos.org/miniapps/index.json";
     public static final String EXTRA_STORE_URL = "store_url";
 
     private RecyclerView mRecyclerView;
@@ -102,7 +102,7 @@ public class MiniAppStoreActivity extends Activity {
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setConnectTimeout(10000);
                 conn.setReadTimeout(15000);
-                conn.setRequestProperty("User-Agent", "MiniAppStore/1.0 GrandiOS");
+                conn.setRequestProperty("User-Agent", "MiniAppStore/1.0 BasedOS");
 
                 StringBuilder sb = new StringBuilder();
                 try (BufferedReader reader = new BufferedReader(

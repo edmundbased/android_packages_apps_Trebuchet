@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 The GrandiOS Project
+ * Copyright (C) 2026 The BasedOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,13 +34,13 @@ import com.android.launcher3.model.data.WorkspaceItemInfo;
  * Extends AppInfo so it integrates seamlessly into the app drawer and workspace
  * alongside native apps — including sorting, sectioning, and click handling.
  *
- * The synthetic ComponentName uses package "com.grandios.miniapp" with the
+ * The synthetic ComponentName uses package "com.basedos.miniapp" with the
  * appId as the class name, ensuring unique identity in the launcher model.
  */
 public class MiniAppInfo extends AppInfo {
 
     /** Synthetic package name used for all mini-app ComponentNames. */
-    public static final String MINIAPP_PACKAGE = "com.grandios.miniapp";
+    public static final String MINIAPP_PACKAGE = "com.basedos.miniapp";
 
     /** Custom item type constant for mini-apps. */
     public static final int ITEM_TYPE_MINIAPP = 100;

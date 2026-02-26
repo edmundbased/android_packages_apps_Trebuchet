@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 The GrandiOS Project
+ * Copyright (C) 2026 The BasedOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ public final class MiniAppMockStore {
                 "QuickCalc",
                 "Fast calculator with unit conversion and history",
                 "https://quickcalc.example.com/manifest.json",
-                "GrandiOS Labs",
+                "BasedOS Labs",
                 "Productivity"));
 
         catalog.add(new StoreEntry(

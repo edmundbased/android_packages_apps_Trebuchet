@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 The GrandiOS Project
+ * Copyright (C) 2026 The BasedOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -244,7 +244,7 @@ public final class MiniAppSdkProvider {
             // Runtime info
             + "    runtime: {\n"
             + "      version: '1.1.0',\n"
-            + "      platform: 'grandios'\n"
+            + "      platform: 'basedos'\n"
             + "    }\n"
             + "  };\n"
             + "\n"
